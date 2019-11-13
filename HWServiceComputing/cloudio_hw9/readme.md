@@ -110,25 +110,25 @@ func initRoutes(mx *mux.Router, formatter *render.Render) {
 
 ​		在运行程序后，在网页键入本地地址和监听端口，进入静态文件列表：
 
-![port](D:\Grade3-1\mygithub\hello-world\HWServiceComputing\cloudio_hw9\pic\port.png)
+![port](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/cloudio_hw9/pic/port.png)
 
 ​		点击html后进入表单填写目录：
 
-![html](D:\Grade3-1\mygithub\hello-world\HWServiceComputing\cloudio_hw9\pic\html.png)
+![html](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/cloudio_hw9/pic/html.png)
 
 ​		填写/assets/中表单信息并提交，在服务端处理后，返回/templates/中表格内容：
 
-![input](D:\Grade3-1\mygithub\hello-world\HWServiceComputing\cloudio_hw9\pic\input.png)
+![input](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/cloudio_hw9/pic/input.png)
 
-![table](D:\Grade3-1\mygithub\hello-world\HWServiceComputing\cloudio_hw9\pic\table.png)
+![table](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/cloudio_hw9/pic/table.png)
 
 ​		当输入错误文件目录时返回以下Not Found提示：
 
-![notfound](D:\Grade3-1\mygithub\hello-world\HWServiceComputing\cloudio_hw9\pic\notfound.png)
+![notfound](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/cloudio_hw9/pic/notfound.png)
 
 ​		在进行上述操作时，在终端得到Log如下：
 
-![log](D:\Grade3-1\mygithub\hello-world\HWServiceComputing\cloudio_hw9\pic\log.png)
+![log](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/cloudio_hw9/pic/log.png)
 
 ​		首先执行可执行文件后返回监听端口，首先进入文件系统后发出请求Get .html文件，在进入/html后由于联系着js文件，则继续请求Get .js文件。填写表单后发出POST请求进行提交，服务端处理后返回表单结果，其过程在浏览器得到了.js文件对 .html进行处理。
 
