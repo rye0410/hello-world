@@ -6,11 +6,11 @@
 
 #### 分工
 
-在本次作业中，我们小组共6人实现了简单的web服务端和客户端，其中分工2人负责前端，4人负责api设计和后端设计。我在实验中参加后端小组，主要编写了登陆和评论相关api，测试保证了登陆api的正确性，协助另外的同学修改和测试评论部分。文章相关api的编写和测试由另外两名同学进行，这两名同学也完成了摘取真实网页博客内容的工作，而我辅助完成对评论部分的相关填充。
+&emsp;&emsp;在本次作业中，我们小组共6人实现了简单的web服务端和客户端，其中分工2人负责前端，4人负责api设计和后端设计。我在实验中参加后端小组，主要编写了登陆和评论相关api，测试保证了登陆api的正确性，协助另外的同学修改和测试评论部分。文章相关api的编写和测试由另外两名同学进行，这两名同学也完成了摘取真实网页博客内容的工作，而我辅助完成对评论部分的相关填充。
 
 ## 实验感想
 
-一改以往将实验感想写在最后的安排，这次我希望将感想写在最前面，以此表示对小组中每一个成员的感谢。由于临近期末，大家的时间都安排比较紧，因此在完成其余期末相关作业同时小组成员间还要兼顾其余成员的时间便显得非常不易。在本次作业中，由于api出来后所有人才能完成接下来的任务，其中某些又是有着依赖关系的（如创建评论需要用户的登陆信息即token等），而前后端耦合后也需要按具体效果进行项目的微调。因此即使做到了前后端分离开发，每个人的工作和其他人还是有着不可分割的联系。为了不影响其他人的进度，大家都在尽快完成自己的工作，还会放下手头工作帮助遇到问题的同学解决难题，甚至会通宵赶进度、生着病去完医院回来赶紧接手工作、在群里帮助组员工作到了晚饭时间才赶去吃顿中午饭。而我在工作中也认识了两个不熟悉的新朋友，虽然这次作业任务繁重，我在应用所学技能的同时还很好地感受到了团队协作的力量，确实受益匪浅。在此也想对每一个小组成员表示感谢！
+&emsp;&emsp;一改以往将实验感想写在最后的安排，这次我希望将感想写在最前面，以此表示对小组中每一个成员的感谢。由于临近期末，大家的时间都安排比较紧，因此在完成其余期末相关作业同时小组成员间还要兼顾其余成员的时间便显得非常不易。在本次作业中，由于api出来后所有人才能完成接下来的任务，其中某些又是有着依赖关系的（如创建评论需要用户的登陆信息即token等），而前后端耦合后也需要按具体效果进行项目的微调。因此即使做到了前后端分离开发，每个人的工作和其他人还是有着不可分割的联系。为了不影响其他人的进度，大家都在尽快完成自己的工作，还会放下手头工作帮助遇到问题的同学解决难题，甚至会通宵赶进度、生着病去完医院回来赶紧接手工作、在群里帮助组员工作到了晚饭时间才赶去吃顿中午饭。而我在工作中也认识了两个不熟悉的新朋友，虽然这次作业任务繁重，我在应用所学技能的同时还很好地感受到了团队协作的力量，确实受益匪浅。在此也想对每一个小组成员表示感谢！
 
 ## API设计
 
@@ -40,7 +40,7 @@
 生成如下文档部分：
 
 
-<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/apisign.png" alt="apisign" style="zoom:67%;" />
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/apisign.png" alt="apisign" style="zoom:67%;" div align=center/>
 
 而完整文档可通过以下链接查看：
 
@@ -88,7 +88,7 @@ func CreateUser() {
 
 对于数据库和表的存在信息进行了检测，随后在初始时增添了 user0 ~ user9 的账户，其密码对应 pass0 ~ pass9。随后便可利用这些信息进行登陆：
 
-由于本次平台测试部署在本地，在使用 Post 方法在对静态资源进行请求时会得到 405 的服务拒绝 ，在此改用 Get 方法模拟登陆过程，来完成前端所发送拼接字符串的解析和校验过程，在此使用的字符串格式借鉴对于 uri 的过滤方式，来在 request 中进行格式化的字符串切分：
+&emsp;&emsp;由于本次平台测试部署在本地，在使用 Post 方法在对静态资源进行请求时会得到 405 的服务拒绝 ，在此改用 Get 方法模拟登陆过程，来完成前端所发送拼接字符串的解析和校验过程，在此使用的字符串格式借鉴对于 uri 的过滤方式，来在 request 中进行格式化的字符串切分：
 
 ```go
 u, err := url.Parse(r.URL.String())
@@ -130,7 +130,7 @@ token.Claims = claims
 
 其登陆过程进行后端测试结果如下：
 
-<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/curlSignin.png" alt="curlSignin" style="zoom:80%;" />
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/curlSignin.png" alt="curlSignin" style="zoom:80%;" div align=center />
 
 以 createComment 为例，在对其他 api 进行方法操作时，首先对于 request 请求的token进行解析：
 
@@ -169,40 +169,42 @@ if token.Valid {
 }
 ```
 
-通过这种方式，实际上完成了 JWT 方案，在用户验证登陆成功后服务器返回 token 并被保存在客户端，而用户后续的请求操作则通过客户端中取出 token 并返还服务器进行验证，以对用户操作进行身份校验。
+&emsp;&emsp;通过这种方式，实际上完成了 JWT 方案，在用户验证登陆成功后服务器返回 token 并被保存在客户端，而用户后续的请求操作则通过客户端中取出 token 并返还服务器进行验证，以对用户操作进行身份校验。
 
 我们编写了测试函数再后端进行各个 api 的功能检测，其验证结果的部分显示如下：
 
-![3](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/backtest.png)
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/backtest.png" div=center />
 
 ## 实验结果
 
 而整个实验前后端耦合后的最终结果显示如下：
 
-登陆界面： (/sigin)
+登陆界面：
 
-![signin](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/signin.png)
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/signin.png" div=center />
 
-登陆后进入个人博客列表： (/articleList)
+登陆后进入个人博客列表：
 
-![ariticleList](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/ariticleList.png)
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/ariticleList.png" div=center />
 
-删除文章，由右下角可以看出其实现了分页功能：![delete](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/delete.png)
+删除文章，由右下角可以看出其实现了分页功能：
+
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/delete.png" div=center />
 
 删除结果：可以发现上一个图中的最后一条博客已无
 
-![afterdelete](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/afterdelete.png)
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/afterdelete.png" div=center />
 
 点进文章查看博文内容：
 
-![viewarticle](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/viewarticle.png)
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/viewarticle.png" div=center />
 
 查看博文最底部评论部分：
 
-![comments](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/comments.png)
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/comments.png" div=center />
 
 发表一条新的评论：（发表内容如上图可看出）
 
-![afteradd](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/afteradd.png)
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/afteradd.png" div=center />
 
 可以看出评论正常添加，且评论部分也实现了分页功能。
