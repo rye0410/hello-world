@@ -40,7 +40,7 @@
 生成如下文档部分：
 
 
-<img src="C:\Users\86159\Desktop\fuwu\apisign.png" alt="apisign" style="zoom:67%;" />
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/apisign.png" alt="apisign" style="zoom:67%;" />
 
 而完整文档可通过以下链接查看：
 
@@ -130,7 +130,7 @@ token.Claims = claims
 
 其登陆过程进行后端测试结果如下：
 
-<img src="C:\Users\86159\Desktop\fuwu\curlSignin.png" alt="curlSignin" style="zoom:80%;" />
+<img src="https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/curlSignin.png" alt="curlSignin" style="zoom:80%;" />
 
 以 createComment 为例，在对其他 api 进行方法操作时，首先对于 request 请求的token进行解析：
 
@@ -173,7 +173,7 @@ if token.Valid {
 
 我们编写了测试函数再后端进行各个 api 的功能检测，其验证结果的部分显示如下：
 
-![3](C:\Users\86159\Desktop\fuwu\backtest.png)
+![3](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/backtest.png)
 
 ## 实验结果
 
@@ -181,28 +181,28 @@ if token.Valid {
 
 登陆界面： (/sigin)
 
-![signin](C:\Users\86159\Desktop\fuwu\signin.png)
+![signin](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/signin.png)
 
 登陆后进入个人博客列表： (/articleList)
 
-![ariticleList](C:\Users\86159\Desktop\fuwu\ariticleList.png)
+![ariticleList](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/ariticleList.png)
 
-删除文章，由右下角可以看出其实现了分页功能：![delete](C:\Users\86159\Desktop\fuwu\delete.png)
+删除文章，由右下角可以看出其实现了分页功能：![delete](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/delete.png)
 
 删除结果：可以发现上一个图中的最后一条博客已无
 
-![afterdelete](C:\Users\86159\Desktop\fuwu\afterdelete.png)
+![afterdelete](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/afterdelete.png)
 
 点进文章查看博文内容：
 
-![viewarticle](C:\Users\86159\Desktop\fuwu\viewarticle.png)
+![viewarticle](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/viewarticle.png)
 
 查看博文最底部评论部分：
 
-![comments](C:\Users\86159\Desktop\fuwu\comments.png)
+![comments](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/comments.png)
 
 发表一条新的评论：（发表内容如上图可看出）
 
-![afteradd](C:\Users\86159\Desktop\fuwu\afteradd.png)
+![afteradd](https://github.com/rye0410/hello-world/blob/master/HWServiceComputing/pic/afteradd.png)
 
 可以看出评论正常添加，且评论部分也实现了分页功能。
